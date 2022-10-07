@@ -24,6 +24,8 @@
 ## Installation
 
 > **npm i rn-country-picker**
+> or
+> **yarn add rn-country-picker**
 
 ## Usage
 
