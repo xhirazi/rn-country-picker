@@ -28,48 +28,38 @@
 ## Usage
 
 ```jsx
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import CountryPicker from "rn-country-picker";
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mCountryCode: "91",
-    };
-  }
 
-  _selectedValue = (index) => {
-    this.setState({ mCountryCode: index });
-  };
+const App = () => {
+  const [countryCode, updateCountryCode] = useState("91");
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.titleText}>React Native Country Picker</Text>
+  return (
+    <View style={styles.container}>
+      <Text style={styles.titleText}>React Native Country Picker</Text>
 
-        <CountryPicker
-          disable={false}
-          animationType={"slide"}
-          containerStyle={styles.pickerStyle}
-          pickerTitleStyle={styles.pickerTitleStyle}
-          dropDownImage={require("./res/ic_drop_down.png")}
-          selectedCountryTextStyle={styles.selectedCountryTextStyle}
-          countryNameTextStyle={styles.countryNameTextStyle}
-          pickerTitle={"Country Picker"}
-          searchBarPlaceHolder={"Search......"}
-          hideCountryFlag={false}
-          hideCountryCode={false}
-          searchBarStyle={styles.searchBarStyle}
-          backButtonImage={require("./res/ic_back_black.png")}
-          searchButtonImage={require("./res/ic_search.png")}
-          countryCode={this.state.mCountryCode}
-          selectedValue={this._selectedValue}
-        />
-      </View>
-    );
-  }
-}
+      <CountryPicker
+        disable={false}
+        animationType={"slide"}
+        containerStyle={styles.pickerStyle}
+        pickerTitleStyle={styles.pickerTitleStyle}
+        dropDownImage={require("./res/ic_drop_down.png")}
+        selectedCountryTextStyle={styles.selectedCountryTextStyle}
+        countryNameTextStyle={styles.countryNameTextStyle}
+        pickerTitle={"Country Picker"}
+        searchBarPlaceHolder={"Search......"}
+        hideCountryFlag={false}
+        hideCountryCode={false}
+        searchBarStyle={styles.searchBarStyle}
+        backButtonImage={require("./res/ic_back_black.png")}
+        searchButtonImage={require("./res/ic_search.png")}
+        countryCode={countryCode}
+        selectedValue={updateCountryCode}
+      />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -125,6 +115,8 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
 });
+
+export default App;
 ```
 
 ## Properties
