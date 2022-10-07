@@ -141,6 +141,8 @@ const styles = StyleSheet.create({
 | selectedCountryTextStyle | -       | object                   | Customize selected label text style                            | Optional          |
 | dropDownImageStyle       | -       | object                   | Change dropdwon arrow style                                    | Optional          |
 | countryFlagContainer     | -       | object                   | Customize flag style                                           | Optional          |
+| backImageStyle           | -       | object                   | Customize back arrow style                                     | Optional          |
+| searchImageStyle         | -       | object                   | Customize search icon style                                    | Optional          |
 | searchButtonImage        | -       | png/jpg                  | Add custom search image                                        | Optional          |
 | backButtonImage          | -       | png/jpg                  | Add custom back button image                                   | Optional          |
 | dropDownImage            | -       | png/jpg                  | Add custom drop down image                                     | Optional          |
