@@ -20,6 +20,7 @@
 4. Dynamically change dropdown, search and back button images.
 5. Customizable search bar style and text colors.
 6. Change animation(Slide, fade, none).
+7. Multiple language support.
 
 ## Installation
 
